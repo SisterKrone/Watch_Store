@@ -79,7 +79,7 @@ section .item {
     transform: rotate(45deg);
 }
 
-.content{
+.content {
     position: absolute;
     right: 100px;
     width: 65%;
@@ -91,16 +91,66 @@ section .item {
     gap: 15px;
 }
 
-.watch_information{
+.watch_information {
     font-weight: bold;
 }
 
 .content h2 {
-  font-size: 3.8em; 
-  line-height: 1em; 
+    font-size: 3.8em;
+    line-height: 1em;
+    color: #ffe600;
 
 }
 
-.description{
-    
+.description {
+    color: #ffe600;
+}
+
+.details {
+    border-radius: 10px;
+    height: 35px;
+    width: 120px;
+    border: 1px solid #ffe600;
+    background-color: #8e7905;
+    color: #000000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.indicators {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    height: 200px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 10px;
+}
+
+.indicators .number {
+    font-size: 5em;
+    background: linear-gradient(0deg, #3f2f07, #eaff00);
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+
+    color: transparent;
+
+}
+
+.indicators ul {
+    display: flex;
+    gap: 8px
+}
+
+.indicators li {
+    width: 50px;
+    height: 5px;
+    background-image: radial-gradient(#d29c12, #090808);
+    border-radius: 10px;
+    transition: 0.5s;
 }

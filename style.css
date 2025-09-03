@@ -221,8 +221,12 @@ section .item {
 
 }
 
-section .list .item {
+section .list {
     --calculation: 1;
+}
+
+section .list .item {
+
 
     transform: translateX(calc(100vw * var(--calculation)));
     transition: 0.5s;

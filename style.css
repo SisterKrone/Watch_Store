@@ -43,7 +43,7 @@ nav .talk {
 }
 
 section {
-    background-image: radial-gradient(#f3b415, #090808);
+    background-image: radial-gradient(#f3b415, #000000);
     position: relative;
     height: 100vh;
 }
@@ -93,7 +93,7 @@ section .item {
 }
 
 .arrows button:hover {
-    opacity: 0.9;
+    opacity: 0.7;    
 }
 
 
@@ -102,6 +102,18 @@ section .item {
     transform: translateY(60%);
     left: 50%;
     transform: translate(-50%, 60%);
+}
+
+.watch_img::before {
+    content: '';
+    position: absolute;
+    background-color: #000000;
+    width: 80%;
+    height: 250px;
+    top: 85%;
+    left: 50px;
+    border-radius: 50%;
+    filter: blur(80px);
 }
 
 .watch_img img {
@@ -132,7 +144,7 @@ section .item {
 }
 
 .content h2 {
-    font-size: 4em;
+    font-size: 5em;
     line-height: 1em;
     color: #ffe600;
     font-family: "Epunda Slab", serif;
@@ -200,14 +212,16 @@ section .item {
 }
 
 section .list .item {
-    transform: translateX(100vw);
+    --calculation: 1;
+
+    transform: translateX(calc(100vw * var(--calculation)));
     transition: 0.5s;
     opacity: 0;
 }
 
 section .watch_img img {
     transform: rotate(0);
-    transition: 0.5s;
+    transition: 4s;
     transition-delay: 0.3s;
 }
 
@@ -215,7 +229,7 @@ section .watch_information,
 h2,
 .description,
 .details {
-    transform: translateX(200px);
+    transform: translateX(calc(200px * var(--calculation)));
     transition: 0.7s;
     transition-delay: 0.3s;
     opacity: 0;
@@ -249,4 +263,8 @@ h2,
 
 section .list .active .watch_img img {
     transform: rotate(45deg);
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
 }
